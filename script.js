@@ -56,17 +56,69 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-fetch("projects.json")
-  .then((response) => response.json())
-  .then((data) => {
-    const projectsSection = document.getElementById("projects");
-    data.forEach((project) => {
-      projectsSection.innerHTML += `
-                <div class="project">
-                    <h3>${project.title}</h3>
-                    <p>${project.description}</p>
-                    <a href="${project.link}" target="_blank">View Project</a>
-                </div>
-            `;
+// fetch("projects.json")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     const projectsSection = document.getElementById("projects");
+//     data.forEach((project) => {
+//       projectsSection.innerHTML += `
+//                 <div class="project">
+//                     <h3>${project.title}</h3>
+//                     <p>${project.description}</p>
+//                     <a href="${project.link}" target="_blank">View Project</a>
+//                 </div>
+//             `;
+//     });
+//   });
+
+// Fetch translations and projects data
+Promise.all([
+  fetch("translations.json").then((response) => response.json()),
+  fetch("projects.json").then((response) => response.json()),
+])
+  .then(([translations, projects]) => {
+    const languageToggle = document.getElementById("language-toggle");
+    let currentLang = "en"; // Default language
+
+    // Function to update the page content
+    function updateContent(lang) {
+      // Update static text
+      document.getElementById("my-name").textContent =
+        translations[lang]["my-name"];
+      document.getElementById("profession").textContent =
+        translations[lang]["profession"];
+      document.getElementById("projects-title").textContent =
+        translations[lang]["projects-title"];
+
+      // Update dynamic projects
+      const projectsSection = document.getElementById("project-list");
+      projectsSection.innerHTML = ""; // Clear existing content
+      projects.forEach((project) => {
+        projectsSection.innerHTML += `
+          <div class="project">
+            <h3>${translations[lang][`${project.id}-title`]}</h3>
+            <p>${translations[lang][`${project.id}-description`]}</p>
+            <a href="${project.link}" target="_blank">${
+          translations[lang]["view-project"]
+        }</a>
+          </div>
+        `;
+      });
+    }
+
+    // Toggle between English and Arabic
+    languageToggle.addEventListener("click", () => {
+      if (currentLang === "en") {
+        currentLang = "ar";
+        languageToggle.textContent = "English";
+      } else {
+        currentLang = "en";
+        languageToggle.textContent = "عربي";
+      }
+      updateContent(currentLang);
     });
-  });
+
+    // Initialize the page with the default language
+    updateContent(currentLang);
+  })
+  .catch((error) => console.error("Error loading data:", error));
