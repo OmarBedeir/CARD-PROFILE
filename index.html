@@ -17,12 +17,15 @@
   </head>
   <body>
     <section class="container">
-      <button id="language-toggle" class="language-toggle">عربي</button>
-      <div class="lights-control" role="button" tabindex="0">
-        lights
-        <input type="checkbox" id="lights-input" class="lights-input" />
-        <label for="lights-input" class="lights-label"></label>
+      <div class="container__button">
+        <div class="lights-control" role="button" tabindex="0">
+          lights
+          <input type="checkbox" id="lights-input" class="lights-input" />
+          <label for="lights-input" class="lights-label"></label>
+        </div>
+        <button id="language-toggle" class="language-toggle">عربي</button>
       </div>
+
       <article class="card">
         <div class="lights">
           <svg
@@ -740,6 +743,21 @@
       <section id="projects" class="projects">
         <h2 class="projects__title" id="projects-title">Projects</h2>
         <div id="project-list" class="project-list"></div>
+      </section>
+      <section id="contact" class="contact">
+        <h2 class="contact__title">Contact Me</h2>
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="submit">
+            Send <span class="arrow"></span>
+          </button>
+        </form>
       </section>
     </section>
 
