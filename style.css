@@ -41,6 +41,7 @@ body {
 .container {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #e5e5f7;
@@ -55,7 +56,7 @@ body {
   align-items: center;
   gap: 1rem;
   position: absolute;
-  top: 10rem;
+  top: 5rem;
   font-size: 2.5rem;
   font-weight: bold;
   color: rgb(31, 30, 30);
@@ -113,6 +114,7 @@ body {
 .bulb-even {
   animation: party 0.5s infinite alternate-reverse;
 }
+
 @keyframes party {
   from {
     fill: #ff1111;
@@ -197,4 +199,21 @@ body {
 }
 .username {
   font-size: 1.6rem;
+}
+.projects__title {
+  text-align: center;
+  margin-left: 10rem;
+  margin-bottom: 2rem;
+  border: 0.1rem #000 solid;
+  background-color: #e5e5f7;
+}
+.projects {
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 40.7rem;
+  border-radius: 0 0 5rem 5rem;
+  padding: 2rem;
+  margin-top: 0.1rem;
+  font-size: medium;
 }

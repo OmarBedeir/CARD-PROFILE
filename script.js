@@ -55,3 +55,18 @@ document.addEventListener("keydown", (event) => {
     });
   }
 });
+
+fetch("projects.json")
+  .then((response) => response.json())
+  .then((data) => {
+    const projectsSection = document.getElementById("projects");
+    data.forEach((project) => {
+      projectsSection.innerHTML += `
+                <div class="project">
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <a href="${project.link}" target="_blank">View Project</a>
+                </div>
+            `;
+    });
+  });
