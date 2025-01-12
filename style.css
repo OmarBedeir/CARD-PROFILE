@@ -248,8 +248,8 @@ input {
   border: none;
 }
 .submit {
-  display: inline-flex; /* Aligns text and arrow horizontally */
-  align-items: center; /* Centers content vertically */
+  display: inline-flex;
+  align-items: center;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -266,9 +266,9 @@ input {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
   border-left: 8px solid white;
-  margin-left: 8px; /* Spacing between text and arrow */
+  margin-left: 8px;
 }
 .submit:active {
-  transform: translateY(5px); /* Moves the button downward */
-  background-color: #0056b3; /* Darkens the color on click */
+  transform: translateY(5px);
+  background-color: #0056b3;
 }
