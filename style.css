@@ -193,8 +193,8 @@ body {
   cursor: pointer;
 }
 .column.active {
-  transform: scale(1.1); /* Example: Slightly enlarge the column */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   opacity: 1;
   transform: translateY(0);
 }
