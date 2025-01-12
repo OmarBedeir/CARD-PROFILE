@@ -2,18 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Omar Bedeir's Personal Portfolio - Software Engineer"
+    />
+    <meta
+      name="keywords"
+      content="Software Engineer, Portfolio, Web Development"
+    />
+    <meta name="author" content="Omar Bedeir" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Omar Bedeir</title>
   </head>
   <body>
     <section class="container">
+      <button id="language-toggle" class="language-toggle">عربي</button>
       <div class="lights-control" role="button" tabindex="0">
         lights
         <input type="checkbox" id="lights-input" class="lights-input" />
         <label for="lights-input" class="lights-label"></label>
       </div>
-      <atricle class="card">
+      <article class="card">
         <div class="lights">
           <svg
             width="368"
@@ -675,8 +685,8 @@
             alt="omar bedeir picture"
             class="pic"
           />
-          <h1 class="title" data-name="my-name">Omar Bedeir</h1>
-          <h2 class="profession">Software Engineer</h2>
+          <h1 class="title" data-name="my-name" id="my-name">Omar Bedeir</h1>
+          <h2 class="profession" id="profession">Software Engineer</h2>
         </div>
         <div class="bottom">
           <div class="column" tabindex="0" role="button">
@@ -701,14 +711,14 @@
               <a href="https://twitter.com/OmarsBedeir">
                 <img
                   src="./assets/twitter.png"
-                  alt="linkedin icon"
+                  alt="twitter icon"
                   class="icon"
                 />
               </a>
               <a href="#">
                 <img
                   src="./assets/instagram.png"
-                  alt="linkedin icon"
+                  alt="instagram icon"
                   class="icon"
               /></a>
             </div>
@@ -719,17 +729,17 @@
               <a href="#"
                 ><img
                   src="./assets/facebook.png"
-                  alt="linkedin icon"
+                  alt="facebook icon"
                   class="icon"
               /></a>
             </div>
             <h3 class="username">omar Bedeir</h3>
           </div>
         </div>
-      </atricle>
+      </article>
       <section id="projects" class="projects">
-        <h2 class="projects__title">Projects</h2>
-        <div id="project-list"></div>
+        <h2 class="projects__title" id="projects-title">Projects</h2>
+        <div id="project-list" class="project-list"></div>
       </section>
     </section>
 

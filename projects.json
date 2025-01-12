@@ -1,12 +1,10 @@
 [
   {
-    "title": "Project 1",
-    "description": "omniva food .",
+    "id": "project1",
     "link": "https://example.com/project1"
   },
   {
-    "title": "Project 2",
-    "description": "personal website.",
+    "id": "project2",
     "link": "https://example.com/project2"
   }
 ]

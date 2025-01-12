@@ -51,12 +51,21 @@ body {
   );
   background-size: 1.2rem 1.2rem;
 }
+.language-toggle {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1rem;
+}
 .lights-control {
   display: flex;
   align-items: center;
   gap: 1rem;
   position: absolute;
-  top: 5rem;
+  top: 2rem;
   font-size: 2.5rem;
   font-weight: bold;
   color: rgb(31, 30, 30);
@@ -96,7 +105,7 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 35rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
 }
 .lights {
@@ -200,14 +209,19 @@ body {
 .username {
   font-size: 1.6rem;
 }
+.projects {
+  background-color: aliceblue;
+}
 .projects__title {
   text-align: center;
-  margin-left: 10rem;
+
   margin-bottom: 2rem;
   border: 0.1rem #000 solid;
+  border-radius: 1rem;
   background-color: #e5e5f7;
 }
-.projects {
+
+.project-list {
   background-color: aliceblue;
   display: grid;
   grid-template-columns: repeat(2, 1fr);

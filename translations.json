@@ -1,0 +1,22 @@
+{
+  "en": {
+    "my-name": "Omar Bedeir",
+    "profession": "Software Engineer",
+    "projects-title": "Projects",
+    "view-project": "View Project",
+    "project1-title": "Project 1",
+    "project1-description": "omniva food.",
+    "project2-title": "Project 2",
+    "project2-description": "personal website."
+  },
+  "ar": {
+    "my-name": "عمر بدير",
+    "profession": "مهندس برمجيات",
+    "projects-title": "المشاريع",
+    "view-project": "عرض المشروع",
+    "project1-title": "المشروع الأول",
+    "project1-description": "أومنيفا فود.",
+    "project2-title": "المشروع الثاني",
+    "project2-description": "موقع شخصي."
+  }
+}
